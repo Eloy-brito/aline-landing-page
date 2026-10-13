@@ -1,0 +1,11 @@
+Organização para as fotos dos 7 modelos de chinelos:
+
+1. modelo-01 (ex.: modelo-01.jpg ou modelo-01.webp)
+2. modelo-02 (ex.: modelo-02.jpg ou modelo-02.webp)
+3. modelo-03 (ex.: modelo-03.jpg ou modelo-03.webp)
+4. modelo-04 (ex.: modelo-04.jpg ou modelo-04.webp)
+5. modelo-05 (ex.: modelo-05.jpg ou modelo-05.webp)
+6. modelo-06 (ex.: modelo-06.jpg ou modelo-06.webp)
+7. modelo-07 (ex.: modelo-07.jpg ou modelo-07.webp)
+
+Observação: As imagens reais fornecidas pela cliente devem ser inseridas nesta pasta.
