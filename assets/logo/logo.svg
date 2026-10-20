@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none" role="img" aria-label="Logotipo Foco no Chinelo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none" role="img" aria-label="Logotipo Foco no Chinelo">
   <defs>
     <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#8C6239" />
@@ -46,14 +46,14 @@
     <circle cx="24.5" cy="13.5" r="1.2" fill="#FFFFFF" />
   </g>
 
-  <!-- Tipografia da Marca -->
-  <g class="logo-text" transform="translate(68, 0)">
-    <!-- Nome Principal: Foco no Chinelo -->
+  <!-- Tipografia da Marca: Foco no Chinelo -->
+  <g class="logo-text" transform="translate(64, 0)">
+    <!-- Nome Principal com espaço amplo e sem risco de corte -->
     <text x="0" y="34" 
           font-family="'Cormorant Garamond', Georgia, serif" 
-          font-size="28" 
+          font-size="27" 
           font-weight="700" 
-          letter-spacing="0.8" 
+          letter-spacing="0.5" 
           fill="#6D4C2B">Foco no Chinelo</text>
 
     <!-- Tagline: Artesanato & Elegância -->
@@ -61,11 +61,11 @@
           font-family="'Montserrat', system-ui, -apple-system, sans-serif" 
           font-size="8.5" 
           font-weight="500" 
-          letter-spacing="2.8" 
+          letter-spacing="2.6" 
           fill="#8C6239" 
           text-transform="uppercase">Artesanato &amp; Elegância</text>
 
-    <!-- Linha decorativa refinada -->
-    <line x1="2" y1="55" x2="198" y2="55" stroke="#EADBCE" stroke-width="0.8" stroke-linecap="round" />
+    <!-- Linha decorativa refinada emoldurando a marca -->
+    <line x1="2" y1="55" x2="235" y2="55" stroke="#EADBCE" stroke-width="0.8" stroke-linecap="round" />
   </g>
 </svg>
