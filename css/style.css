@@ -135,22 +135,54 @@ button {
 .brand {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
   text-decoration: none;
   flex-shrink: 0;
+  transition: opacity var(--transition-fast);
 }
 
-.brand-logo {
+.brand:hover {
+  opacity: 0.92;
+}
+
+.brand-logo-img {
   height: 48px;
   width: auto;
-  max-width: 255px;
+  aspect-ratio: 1341 / 1173;
   object-fit: contain;
+  border-radius: var(--radius-sm);
   display: block;
-  transition: transform var(--transition-fast), opacity var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(109, 76, 43, 0.12);
+  transition: transform var(--transition-fast);
 }
 
-.brand:hover .brand-logo {
-  transform: translateY(-1px);
-  opacity: 0.95;
+.brand:hover .brand-logo-img {
+  transform: scale(1.04);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.brand-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-primary);
+  white-space: nowrap;
 }
 
 /* Menu de Navegação */
@@ -352,7 +384,7 @@ button {
   font-size: 0.8rem;
 }
 
-/* Coluna Visual & Placeholder Identificado */
+/* Coluna Visual & Fotografia Principal Oficial */
 .hero-media {
   width: 100%;
   display: flex;
@@ -365,181 +397,225 @@ button {
   max-width: 480px;
 }
 
-.hero-photo-placeholder {
+.hero-image-frame {
   position: relative;
-  background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-pearl) 60%, var(--color-accent-soft) 100%);
-  border: 2px dashed var(--color-border);
   border-radius: var(--radius-lg);
-  padding: var(--space-2xl) var(--space-lg);
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  overflow: hidden;
   box-shadow: var(--shadow-card);
-  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.hero-photo-placeholder:hover {
-  border-color: var(--color-primary-light);
+.hero-image-frame:hover {
+  transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
 }
 
-.placeholder-tag-corner {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: var(--color-accent-soft);
-  color: var(--color-primary-dark);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
-}
-
-.placeholder-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 320px;
-}
-
-.placeholder-icon-container {
-  width: 84px;
-  height: 84px;
-  margin-bottom: var(--space-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-pearl);
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-subtle);
-  border: 1px solid var(--color-border);
-}
-
-.placeholder-svg {
-  width: 58px;
-  height: 58px;
-}
-
-.placeholder-heading {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-primary-dark);
-  margin-bottom: var(--space-xs);
-}
-
-.placeholder-text {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  line-height: 1.5;
-  margin-bottom: var(--space-md);
-}
-
-.placeholder-specs {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--color-border);
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--color-primary);
-}
-
-/* Cartão Flutuante Decorativo */
-.hero-floating-badge {
-  position: absolute;
-  bottom: -15px;
-  left: -10px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  padding: 0.75rem 1rem;
-  border-radius: var(--radius-md);
-  box-shadow: 0 10px 25px rgba(109, 76, 43, 0.12);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  z-index: 2;
-  animation: floatSlow 4s ease-in-out infinite alternate;
-}
-
-@keyframes floatSlow {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-6px);
-  }
-}
-
-.badge-icon {
-  font-size: 1.3rem;
-}
-
-.badge-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.badge-title {
-  font-weight: 700;
-  font-size: 0.82rem;
-  color: var(--color-primary-dark);
-}
-
-.badge-desc {
-  font-size: 0.72rem;
-  color: var(--color-text-muted);
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1086 / 1448;
 }
 
 /* ==========================================================================
-   Estrutura das Demais Seções (Preservadas)
+   Vitrine de Produtos & Coleção Exclusiva (7 Modelos)
    ========================================================================== */
-.vitrine-section,
-.sobre-section {
-  padding: var(--space-2xl) 0;
+.vitrine-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-body);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: 2.2rem;
-  font-weight: 600;
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  font-weight: 700;
   color: var(--color-primary-dark);
   margin-bottom: var(--space-xs);
+  letter-spacing: -0.01em;
 }
 
 .section-subtitle {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--color-text-muted);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Grid Preparado para os 7 Modelos de Produtos */
+/* Grid Preparado e Responsivo para os 7 Modelos */
 .produtos-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
+  align-items: stretch;
+}
+
+/* Design dos Cards de Produtos */
+.produto-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.produto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary-light);
+}
+
+.produto-media {
+  position: relative;
+  background: radial-gradient(circle at center, #FFFFFF 0%, var(--color-accent-soft) 100%);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  min-height: 290px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.produto-badge {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  background-color: rgba(255, 253, 249, 0.95);
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-border);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-subtle);
+  z-index: 2;
+}
+
+.produto-img {
+  max-width: 88%;
+  max-height: 88%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(109, 76, 43, 0.12));
+  transition: transform var(--transition-base);
+}
+
+.produto-card:hover .produto-img {
+  transform: scale(1.05);
+}
+
+.produto-info {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: var(--space-md);
+  background-color: var(--color-surface);
+}
+
+.produto-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.produto-nome {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1.25;
+}
+
+.produto-descricao {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.produto-action {
+  margin-top: auto;
+  padding-top: var(--space-xs);
+}
+
+.btn-produto-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 46px;
+  background: linear-gradient(135deg, #25D366 0%, #1EBE5D 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-produto-whatsapp:hover {
+  background: linear-gradient(135deg, #1EBE5D 0%, #169E4B 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.38);
+  transform: translateY(-2px);
+}
+
+.btn-produto-whatsapp:active {
+  transform: translateY(0);
+}
+
+.whatsapp-icon-sm {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.btn-produto-whatsapp:hover .whatsapp-icon-sm {
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   Demais Seções Preservadas (Sobre & Rodapé)
+   ========================================================================== */
+.sobre-section {
+  padding: var(--space-3xl) 0;
 }
 
 /* --------------------------------------------------------------------------
    4. Media Queries (Responsividade Progressiva)
    -------------------------------------------------------------------------- */
+/* Tablets (2 Colunas na Vitrine) */
 @media (min-width: 600px) {
   .produtos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Desktop (3 Colunas na Vitrine e Hero Lado a Lado) */
 @media (min-width: 992px) {
   .hero-container {
     display: grid;
@@ -552,11 +628,6 @@ button {
     justify-content: flex-end;
   }
 
-  .hero-floating-badge {
-    left: -20px;
-    bottom: 24px;
-  }
-
   .produtos-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -564,7 +635,8 @@ button {
 
 @media (min-width: 1200px) {
   .produtos-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
   }
 }
 
@@ -587,11 +659,8 @@ button {
     gap: var(--space-xs);
   }
 
-  .hero-floating-badge {
-    position: static;
-    margin-top: var(--space-md);
-    width: 100%;
-    animation: none;
+  .hero-img {
+    max-height: 420px;
   }
 }
 
@@ -600,11 +669,16 @@ button {
     padding: 0.5rem 0;
   }
 
-  .brand-logo {
-    height: 36px;
-    width: auto;
-    max-width: 185px;
-    object-fit: contain;
+  .brand-logo-img {
+    height: 38px;
+  }
+
+  .brand-title {
+    font-size: 1.25rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.62rem;
   }
 
   .nav-menu {
@@ -621,16 +695,30 @@ button {
     font-size: 0.75rem;
   }
 
-  .hero-photo-placeholder {
-    min-height: 350px;
-    padding: var(--space-xl) var(--space-md);
+  .produto-media {
+    min-height: 250px;
+  }
+
+  .produto-info {
+    padding: var(--space-md);
+  }
+
+  .produto-nome {
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 380px) {
-  .brand-logo {
-    height: 30px;
-    max-width: 155px;
+  .brand-logo-img {
+    height: 32px;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .brand-tagline {
+    display: none;
   }
 
   .nav-menu {
@@ -647,5 +735,18 @@ button {
     font-size: 0.7rem;
   }
 }
+
+/* Respeito a Movimento Reduzido (Acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
 
