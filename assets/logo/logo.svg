@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none" role="img" aria-label="Logotipo Foco no Chinelo">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8C6239" />
+      <stop offset="50%" stop-color="#C4A482" />
+      <stop offset="100%" stop-color="#6D4C2B" />
+    </linearGradient>
+    <linearGradient id="pearlGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F9ECE8" />
+      <stop offset="100%" stop-color="#E8B4B8" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Emblema / Monograma com Pérolas e Curvas Artesanais -->
+  <g class="logo-symbol" transform="translate(6, 6)">
+    <!-- Círculo sutil perolado de fundo -->
+    <circle cx="26" cy="26" r="24" fill="#FAF7F2" stroke="#EADBCE" stroke-width="1.5" />
+    
+    <!-- Curva orgânica artesanal que remete às tiras do chinelo e costura manual -->
+    <path d="M 16 35 C 18 20, 24 16, 26 16 C 28 16, 34 20, 36 35" 
+          stroke="url(#goldGradient)" 
+          stroke-width="2.5" 
+          stroke-linecap="round" 
+          fill="none" />
+          
+    <path d="M 26 16 L 26 36" 
+          stroke="url(#goldGradient)" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-dasharray="1 3" 
+          fill="none" />
+
+    <!-- Pérola central e secundárias (bordado manual) -->
+    <circle cx="26" cy="15" r="4.5" fill="url(#pearlGradient)" stroke="#8C6239" stroke-width="1" />
+    <circle cx="20" cy="23" r="3" fill="url(#pearlGradient)" stroke="#8C6239" stroke-width="0.8" />
+    <circle cx="32" cy="23" r="3" fill="url(#pearlGradient)" stroke="#8C6239" stroke-width="0.8" />
+    <circle cx="17" cy="30" r="2.5" fill="url(#pearlGradient)" stroke="#8C6239" stroke-width="0.8" />
+    <circle cx="35" cy="30" r="2.5" fill="url(#pearlGradient)" stroke="#8C6239" stroke-width="0.8" />
+    
+    <!-- Brilho delicado da pérola central -->
+    <circle cx="24.5" cy="13.5" r="1.2" fill="#FFFFFF" />
+  </g>
+
+  <!-- Tipografia da Marca -->
+  <g class="logo-text" transform="translate(68, 0)">
+    <!-- Nome Principal: Foco no Chinelo -->
+    <text x="0" y="34" 
+          font-family="'Cormorant Garamond', Georgia, serif" 
+          font-size="28" 
+          font-weight="700" 
+          letter-spacing="0.8" 
+          fill="#6D4C2B">Foco no Chinelo</text>
+
+    <!-- Tagline: Artesanato & Elegância -->
+    <text x="2" y="49" 
+          font-family="'Montserrat', system-ui, -apple-system, sans-serif" 
+          font-size="8.5" 
+          font-weight="500" 
+          letter-spacing="2.8" 
+          fill="#8C6239" 
+          text-transform="uppercase">Artesanato &amp; Elegância</text>
+
+    <!-- Linha decorativa refinada -->
+    <line x1="2" y1="55" x2="198" y2="55" stroke="#EADBCE" stroke-width="0.8" stroke-linecap="round" />
+  </g>
+</svg>

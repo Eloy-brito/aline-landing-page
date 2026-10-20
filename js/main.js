@@ -23,8 +23,23 @@ function gerarLinkWhatsApp(modeloNome) {
   return `https://wa.me/${CLIENT_CONFIG.whatsappNumber}?text=${textoCodificado}`;
 }
 
+/**
+ * Utilitário para gerar link do WhatsApp para o botão principal da Hero (encomenda geral)
+ * @returns {string} URL formatada para a API do WhatsApp
+ */
+function gerarLinkWhatsAppHero() {
+  const mensagem = `Olá, Aline! Vi o site Foco no Chinelo e gostaria de fazer uma encomenda personalizada.`;
+  const textoCodificado = encodeURIComponent(mensagem);
+  return `https://wa.me/${CLIENT_CONFIG.whatsappNumber}?text=${textoCodificado}`;
+}
+
 // 2. Inicialização quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', () => {
-  // Estrutura pronta para os próximos passos (renderização ou eventos da vitrine)
+  // Configuração dinâmica do botão da Hero
+  const btnHeroEncomenda = document.getElementById('btn-hero-encomenda');
+  if (btnHeroEncomenda) {
+    btnHeroEncomenda.href = gerarLinkWhatsAppHero();
+  }
+
   console.log(`${CLIENT_CONFIG.storeName} - Projeto inicializado.`);
 });

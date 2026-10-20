@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8C6239" />
+      <stop offset="50%" stop-color="#C4A482" />
+      <stop offset="100%" stop-color="#6D4C2B" />
+    </linearGradient>
+    <linearGradient id="favPearl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F9ECE8" />
+      <stop offset="100%" stop-color="#E8B4B8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo suave arredondado -->
+  <rect width="64" height="64" rx="16" fill="#FAF7F2" stroke="#EADBCE" stroke-width="1.5" />
+
+  <!-- Detalhe do chinelo artesanal -->
+  <path d="M 18 45 C 22 25, 30 20, 32 20 C 34 20, 42 25, 46 45" 
+        stroke="url(#favGold)" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        fill="none" />
+        
+  <path d="M 32 20 L 32 46" 
+        stroke="url(#favGold)" 
+        stroke-width="2.5" 
+        stroke-linecap="round" 
+        stroke-dasharray="1 3.5" 
+        fill="none" />
+
+  <!-- Pérolas bordadas -->
+  <circle cx="32" cy="18" r="6" fill="url(#favPearl)" stroke="#8C6239" stroke-width="1.2" />
+  <circle cx="23" cy="28" r="4" fill="url(#favPearl)" stroke="#8C6239" stroke-width="1" />
+  <circle cx="41" cy="28" r="4" fill="url(#favPearl)" stroke="#8C6239" stroke-width="1" />
+  <circle cx="19" cy="38" r="3" fill="url(#favPearl)" stroke="#8C6239" stroke-width="0.9" />
+  <circle cx="45" cy="38" r="3" fill="url(#favPearl)" stroke="#8C6239" stroke-width="0.9" />
+  
+  <circle cx="30" cy="16" r="1.5" fill="#FFFFFF" />
+</svg>
