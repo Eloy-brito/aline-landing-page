@@ -1319,3 +1319,28 @@ button {
     scroll-behavior: auto !important;
   }
 }
+
+/* Correção do cabeçalho para celulares */
+@media (max-width: 600px) {
+
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .brand {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+}
