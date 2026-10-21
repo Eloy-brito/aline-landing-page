@@ -9,22 +9,34 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Paleta de Cores: Tons suaves, pérola, nude e toques de sofisticação */
-  --color-primary: #8C6239;          /* Dourado quente / bronze sofisticado */
-  --color-primary-dark: #6D4C2B;     /* Tom mais escuro para contraste e hover */
-  --color-primary-light: #C4A482;    /* Tom suave para realces */
-  
-  --color-accent: #E8B4B8;           /* Rosa chá / quartzo delicado */
-  --color-accent-soft: #F9ECE8;      /* Fundo suave rosado */
-  
-  --color-pearl: #FFFDF9;            /* Pérola off-white */
-  --color-bg-body: #FAF7F2;          /* Fundo base quente e artesanal */
-  --color-surface: #FFFFFF;          /* Cartões e superfícies limpas */
-  
-  --color-text-main: #2D2727;        /* Grafite profundo com calor */
-  --color-text-muted: #6B6565;       /* Texto secundário */
-  --color-border: #EADBCE;           /* Linhas e bordas delicadas */
+  --color-primary: #8C6239;
+  /* Dourado quente / bronze sofisticado */
+  --color-primary-dark: #6D4C2B;
+  /* Tom mais escuro para contraste e hover */
+  --color-primary-light: #C4A482;
+  /* Tom suave para realces */
 
-  --color-whatsapp: #25D366;         /* Verde oficial WhatsApp */
+  --color-accent: #E8B4B8;
+  /* Rosa chá / quartzo delicado */
+  --color-accent-soft: #F9ECE8;
+  /* Fundo suave rosado */
+
+  --color-pearl: #FFFDF9;
+  /* Pérola off-white */
+  --color-bg-body: #FAF7F2;
+  /* Fundo base quente e artesanal */
+  --color-surface: #FFFFFF;
+  /* Cartões e superfícies limpas */
+
+  --color-text-main: #2D2727;
+  /* Grafite profundo com calor */
+  --color-text-muted: #6B6565;
+  /* Texto secundário */
+  --color-border: #EADBCE;
+  /* Linhas e bordas delicadas */
+
+  --color-whatsapp: #25D366;
+  /* Verde oficial WhatsApp */
   --color-whatsapp-hover: #1EBE5D;
 
   /* Tipografia */
@@ -32,13 +44,20 @@
   --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
 
   /* Espaçamentos */
-  --space-xs: 0.5rem;    /* 8px */
-  --space-sm: 0.75rem;   /* 12px */
-  --space-md: 1rem;      /* 16px */
-  --space-lg: 1.5rem;    /* 24px */
-  --space-xl: 2rem;      /* 32px */
-  --space-2xl: 3rem;     /* 48px */
-  --space-3xl: 4.5rem;   /* 72px */
+  --space-xs: 0.5rem;
+  /* 8px */
+  --space-sm: 0.75rem;
+  /* 12px */
+  --space-md: 1rem;
+  /* 16px */
+  --space-lg: 1.5rem;
+  /* 24px */
+  --space-xl: 2rem;
+  /* 32px */
+  --space-2xl: 3rem;
+  /* 48px */
+  --space-3xl: 4.5rem;
+  /* 72px */
 
   /* Bordas e Sombras */
   --radius-sm: 6px;
@@ -161,6 +180,52 @@ button {
   filter: drop-shadow(0 5px 16px rgba(109, 76, 43, 0.28));
 }
 
+/* Nome e subtítulo da marca */
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.brand-name {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #75502e;
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #946b40;
+}
+
+/* Ajustes para dispositivos móveis */
+
+@media (max-width: 600px) {
+  .brand {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .brand-logo-img {
+    height: 56px;
+  }
+
+  .brand-name {
+    font-size: 17px;
+  }
+
+  .brand-subtitle {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
 /* brand-text, brand-title e brand-tagline removidos — logo já contém o nome da marca */
 /* Menu de Navegação */
 .nav-menu {
@@ -227,8 +292,8 @@ button {
   overflow: hidden;
   padding: var(--space-2xl) 0 var(--space-3xl);
   background: radial-gradient(circle at 85% 15%, var(--color-accent-soft) 0%, transparent 60%),
-              radial-gradient(circle at 10% 90%, rgba(232, 180, 184, 0.15) 0%, transparent 50%),
-              var(--color-bg-body);
+    radial-gradient(circle at 10% 90%, rgba(232, 180, 184, 0.15) 0%, transparent 50%),
+    var(--color-bg-body);
 }
 
 .hero-container {
@@ -958,7 +1023,7 @@ button {
   height: 120px;
   object-fit: contain;
   border-radius: var(--radius-md);
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
   transition: transform var(--transition-fast);
 }
 
@@ -1244,6 +1309,7 @@ button {
 
 /* Respeito a Movimento Reduzido (Acessibilidade) */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -1253,5 +1319,3 @@ button {
     scroll-behavior: auto !important;
   }
 }
-
-
