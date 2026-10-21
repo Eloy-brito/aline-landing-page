@@ -160,5 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Renderização da vitrine com os 7 modelos
   renderizarVitrine();
 
+  // Atualização automática do ano de copyright
+  const elAno = document.getElementById('ano-copyright');
+  if (elAno) {
+    elAno.textContent = new Date().getFullYear();
+  }
+
   console.log(`${CLIENT_CONFIG.storeName} - Vitrine inicializada com ${PRODUTOS.length} modelos.`);
 });
